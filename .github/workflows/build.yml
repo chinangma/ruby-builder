@@ -12,7 +12,8 @@ jobs:
       matrix:
         os: [ ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, ubuntu-22.04-arm, ubuntu-24.04-arm, macos-13, macos-14 ]
         ruby: [ruby-3.4.2]
-    runs-on: ${{ matrix.os }}
+    runs-on: self-host 
+    #${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4
     - name: Set tag name
